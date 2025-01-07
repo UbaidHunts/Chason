@@ -1,9 +1,9 @@
 # Chasoň: Supporting Cross HBM Channel Data Migration to Enable Efficient Sparse Algebraic Acceleration
 
-Chason is an out-of-order HBM-based sparse algebraic accelerator.  It is built on top of Serpens(https://dl.acm.org/doi/abs/10.1145/3489517.3530420) and introduces a novel non-zero scheduling scheme called **Cross-HBM Channel OoO Scheduling** along with relevant architectural support.
+Chason is an out-of-order HBM-based sparse algebraic accelerator.  It is built on top of  [Serpens](https://dl.acm.org/doi/abs/10.1145/3489517.3530420) and introduces a novel non-zero scheduling scheme called **Cross-HBM Channel OoO Scheduling** along with relevant architectural support.
 
 ## Dependencies
-- **Rapidstream Tapa** [link](https://tapa.readthedocs.io/en/main/)
+- **Rapidstream Tapa** [(Guide)](https://tapa.readthedocs.io/en/main/)
 - **Xilinx Vitis 2023.2**
 - **Xilinx xilinx_u55c_gen3x16_xdma_3_202210_1 shell**
 - **Xilinx U55c FPGA**
