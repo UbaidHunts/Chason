@@ -204,7 +204,7 @@ int main(int argc, char **argv) {
     // print_edges(sparse_A_fpga, NUM_CH_SPARSE, NNZ_per_ch, stall_per_ch,hbm_size);
     
     //cout<<"\n---------------------------- Post-Rescheduling ----------------------------\n\n";
-    cout<<"\n---------------------------- Scheduling ----------------------------\n";
+    cout<<"\n---------------------------- Cross-HBM Channel OoO Scheduling ----------------------------\n";
     vector<vector<edge>> sparse_A;
     vector<aligned_vector<unsigned long> > sparse_A_fpga_in(NUM_CH_SPARSE);
 
@@ -214,8 +214,8 @@ int main(int argc, char **argv) {
 
     
     //print_edges(sparse_A, NUM_CH_SPARSE, NNZ_per_ch, stall_per_ch, hbm_size);
-    printf("Pre-Rescheduling  Channel Length: %d\n", sparse_A_fpga[0].size());
-    printf("Post-Rescheduling Channel Length: %d\n", sparse_A[0].size());
+    printf("PE-aware Non-zero OoO Scheduling - Channel Length: %d\n", sparse_A_fpga[0].size());
+    printf("Cross-HBM Channel OoO Scheduling - Channel Length: %d\n", sparse_A[0].size());
     printf("Improvement  in   Channel Length: %f (more than 1 is better)\n", 
             double(sparse_A_fpga[0].size())/sparse_A[0].size());
 

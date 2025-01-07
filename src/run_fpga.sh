@@ -1,6 +1,3 @@
-#TARGET=hw_emu
-TARGET=hw
-
 # mkdir op
 # OP_FILE="$(pwd)/op/fpga.log"
 INPUT_DIR="../bitstream"
