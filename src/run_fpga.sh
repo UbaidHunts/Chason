@@ -1,10 +1,11 @@
 #TARGET=hw_emu
 TARGET=hw
 
+# mkdir op
 # OP_FILE="$(pwd)/op/fpga.log"
-INPUT_DIR="$(pwd)/bitstream"
+INPUT_DIR="../bitstream"
 BITSTREAM=Chason_xilinx_u55c_gen3x16_xdma_3_202210_1
-MAT_LIB="$(pwd)/matrices"
+MAT_LIB="../matrices"
 rp_time=1000
 
 ###___________________________test___________________________###
