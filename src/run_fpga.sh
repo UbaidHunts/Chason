@@ -1,12 +1,16 @@
 # mkdir op
-# OP_FILE="$(pwd)/op/fpga.log"
+OP_FILE="../op/op.log"
 INPUT_DIR="../bitstream"
 BITSTREAM=Chason_xilinx_u55c_gen3x16_xdma_3_202210_1
-MAT_LIB="../matrices"
+MAT_LIB="../datasets"
 rp_time=1000
 
 ###___________________________test___________________________###
-TAPAB="${INPUT_DIR}/${BITSTREAM}".xclbin ./chason "${MAT_LIB}"/dynamicSoaringProblem_8.mtx "${rp_time}"
+TAPAB="${INPUT_DIR}/${BITSTREAM}".xclbin ./chason "${MAT_LIB}"/c-52.mtx "${rp_time}" >> "${OP_FILE}"
+sh reset.sh
+TAPAB="${INPUT_DIR}/${BITSTREAM}".xclbin ./chason "${MAT_LIB}"/G4.mtx "${rp_time}" >> "${OP_FILE}"
+sh reset.sh
+TAPAB="${INPUT_DIR}/${BITSTREAM}".xclbin ./chason "${MAT_LIB}"/nasa4704.mtx "${rp_time}" >> "${OP_FILE}"
 sh reset.sh
 
 ###___________________________SuiteSparse Matrices___________________________###

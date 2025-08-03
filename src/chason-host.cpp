@@ -24,7 +24,7 @@ template <typename T>
 using aligned_vector = std::vector<T, tapa::aligned_allocator<T>>;
 
 int main(int argc, char **argv) {
-    // cout<<"---------------------------- ---------------------------- -------------"<<argv[1]<<"--------------- ---------------------------- ----------------------------\n";
+    cout<<"---------------------------- ---------------------------- -------------"<<argv[1]<<"--------------- ---------------------------- ----------------------------\n";
     printf("start host\n");
 
     float ALPHA = 0.85;
@@ -218,7 +218,7 @@ int main(int argc, char **argv) {
     printf("Cross-HBM Channel OoO Scheduling - Channel Length: %d\n", sparse_A[0].size());
     printf("Improvement  in   Channel Length: %f (more than 1 is better)\n", 
             double(sparse_A_fpga[0].size())/sparse_A[0].size());
-
+    
 
     cout<<"---------------------------- Chason ----------------------------\n";
     
@@ -252,7 +252,9 @@ int main(int argc, char **argv) {
                    beta_int
                    );
     time_taken_ *= (1e-9/rp_time); // total time in second
-    printf("Kernel time is %f ms\n", time_taken_*1000);
+    printf("Resource Underutilization: %0.2f%\n", 
+            double((sparse_A[0].size())*NUM_CH_SPARSE - nnz)*100 / (sparse_A[0].size()*NUM_CH_SPARSE) );
+    printf("Kernel time: %f ms\n", time_taken_*1000);
     
     float gflops_ =
     2.0 * (nnz + M)
