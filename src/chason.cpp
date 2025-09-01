@@ -527,7 +527,7 @@ l_rp:
             float_v2 out_v;
             float_v2 p_out_v;
             
-            ap_uint<64> u_64   = local_C[c_idx][i>>3];    // i>>3 division by 2^3 = 8 --> 8 PEs ki phle 0th location read ho gi, phir 8th PEs ki 1st location and so on. 
+            ap_uint<64> u_64   = local_C[c_idx][i>>3];    // i>>3 division by 2^3 = 8 --> 0th location of 8 PEs will be read first
             ap_uint<64> p_u_64 = PE_PEsrc_agg[c_idx][i>>3]; 
             
             for (int d = 0; d < 2; ++d) {
