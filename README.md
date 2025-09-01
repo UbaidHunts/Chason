@@ -45,7 +45,7 @@ Alternatively, you can run Chason on the Alveo U55c using the provided bitstream
 sh run_fpga.sh
 ```
 
-You can read more about Chason on this [link](https://ubaidhunts.github.io/ubaidb/).
+You can read more about Chason on this [link](https://ubaidhunts.github.io/ubaidb/assets/projects/Chason_MICRO.pdf).
 
 If you find Chason useful, please cite:
 ```plaintext
