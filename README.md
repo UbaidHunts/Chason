@@ -49,4 +49,11 @@ You can read more about Chason on this [link](https://ubaidhunts.github.io/ubaid
 
 If you find Chason useful, please cite:
 ```plaintext
-leaving for later
+@INPROCEEDINGS{bakhtiar2025chason,
+  author={Bakhtiar, Ubaid and Namjoo, Amirmahdi and Asgari, Bahar},
+  booktitle={2025 58th IEEE/ACM International Symposium on Microarchitecture (MICRO)}, 
+  title={Chasoň:  Supporting Cross HBM Channel Data Migration to Enable Efficient Sparse Algebraic Acceleration}, 
+  year={2025},
+  keywords={High Bandwidth Memory, Sparse Algebra, Streaming Accelerator, Data Migration, PE utilization, FPGA Implementation},
+  doi={10.1145/3725843.3756086}
+}
