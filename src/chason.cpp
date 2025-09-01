@@ -593,7 +593,7 @@ void Merger_Y_PEsrc(tapa::istreams<float_v2, 8> & fifo_in,
             float_v16 tmpv16;
 #pragma HLS aggregate variable=tmpv16
             
-            int idx; fifo_ch_idx[0].try_read(idx);
+            int idx ; fifo_ch_idx[0].try_read(idx );
             int idx1; fifo_ch_idx[1].try_read(idx1);
             int idx2; fifo_ch_idx[2].try_read(idx2);
             int idx3; fifo_ch_idx[3].try_read(idx3);
