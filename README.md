@@ -35,7 +35,7 @@ sh newScript.sh
 
 You can also switch between hardware (`hw`) for bitstream generation or hardware emulation (`hw_emu`) using the `TARGET` variable in `newScript.sh`. The bitstream file (`.xclbin`) will be generated in the `build/vitis_run_<TARGET>` directory.
 
-## To Run Chason on Xilinx Alveo U55c
+## To Run Chason on AMD Alveo U55C
 ```bash
 TAPAB=<path_to_bitstream>/Chason_xilinx_u55c_gen3x16_xdma_3_202210_1.xclbin <path_to_binary_file>/chason <matrix_file>
 ```
