@@ -807,8 +807,9 @@ void phase_one_caller(vector<vector<edge> > &hbm_ch, vector<int> &edge_list_ptr,
             max_len = max(siz, max_len);
         }
         int max_len_MULT_512 = ((max_len + 511) / 512) * 512;
+        edge e_empty = {-1, -1, 0.0};
         for (int k = 0; k < 16; k++) {
-            hbm_ch_temp[k].resize(max_len_MULT_512, 0);
+            hbm_ch_temp[k].resize(max_len_MULT_512, e_empty);
         }
         start = new_edge_list_ptr[i] * 8;
         for (int k = 0; k < 16; k++) {
